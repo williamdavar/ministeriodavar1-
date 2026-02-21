@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministerio Dabar Banderas Poco Sol - Inicio</title>
+    <!-- Tailwind CSS para diseno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuracion de colores basados en la moneda dorada -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        oro: {
+                            50: '#fbf8ea',
+                            100: '#f5efcd',
+                            500: '#d4af37', // Dorado principal
+                            700: '#b08d27', // Dorado oscuro
+                            900: '#7a5f15', // Marron/Dorado muy oscuro
+                        },
+                        oscuro: '#1a1a1a' // Casi negro para contrastar con el oro
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- BARRA DE NAVEGACION -->
+    <nav class="bg-oscuro text-oro-500 shadow-lg sticky top-0 z-50 border-b border-oro-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logotipo / Nombre -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Representacion del Logo Dorado -->
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-oro-100 via-oro-500 to-oro-900 p-1 shadow-md">
+                        <div class="w-full h-full bg-oscuro rounded-full flex items-center justify-center border border-oro-500">
+                            <span class="text-oro-500 font-serif font-bold text-xs text-center leading-none">GS</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-xl tracking-wide text-white uppercase font-serif">Ministerio Dabar</span>
+                        <span class="text-sm text-oro-500">Banderas Poco Sol</span>
+                    </div>
+                </div>
+                <!-- Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#" onclick="mostrarSeccion('inicio'); return false;" class="hover:text-white transition-colors px-3 py-2 text-sm font-semibold uppercase tracking-wider">Inicio</a>
+                    <a href="#" onclick="mostrarSeccion('quienes-somos'); return false;" class="hover:text-white transition-colors px-3 py-2 text-sm font-semibold uppercase tracking-wider">Qui&eacute;nes Somos</a>
+                    <a href="#" onclick="mostrarSeccion('transmisiones'); return false;" class="hover:text-white transition-colors px-3 py-2 text-sm font-semibold uppercase tracking-wider">En Vivo</a>
+                    <a href="#" onclick="mostrarSeccion('biblioteca'); return false;" class="hover:text-white transition-colors px-3 py-2 text-sm font-semibold uppercase tracking-wider">Libros & Spotify</a>
+                    <a href="#" onclick="mostrarSeccion('noticias'); return false;" class="hover:text-white transition-colors px-3 py-2 text-sm font-semibold uppercase tracking-wider">Noticias</a>
+                    <a href="#" onclick="mostrarSeccion('galeria'); return false;" class="hover:text-white transition-colors px-3 py-2 text-sm font-semibold uppercase tracking-wider">Galer&iacute;a</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCION PRINCIPAL (HERO) -->
+    <header id="inicio" class="bg-oscuro relative overflow-hidden border-b-4 border-oro-500">
+        <!-- Fondo con patron sutil -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-oro-500 via-oscuro to-oscuro"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center relative z-10">
+            <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl font-serif">
+                <span class="block text-oro-500 mb-2">Gratitud Suprema</span>
+                <span class="block">Bienvenidos a Nuestro Ministerio</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300 md:text-xl">
+                Un espacio de fe, conexi&oacute;n y aprendizaje. &Uacute;nete a nuestras transmisiones en directo, explora nuestra biblioteca gratuita y mantente conectado con nuestra comunidad.
+            </p>
+            <div class="mt-8 flex justify-center gap-4">
+                <a href="#" onclick="mostrarSeccion('transmisiones'); return false;" class="px-8 py-3 rounded-full bg-oro-500 text-oscuro font-bold hover:bg-oro-100 transition shadow-lg shadow-oro-500/30">
+                    Ver Transmisi&oacute;n en Vivo
+                </a>
+                <a href="#contacto" class="px-8 py-3 rounded-full border border-oro-500 text-oro-500 font-bold hover:bg-oro-900 transition">
+                    Cont&aacute;ctanos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCION: TRANSMISIONES EN VIVO (YOUTUBE) -->
+    <section id="transmisiones" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-oscuro font-serif">Transmisi&oacute;n Directa</h2>
+                <div class="w-24 h-1 bg-oro-500 mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600">Con&eacute;ctate a nuestras reuniones y eventos especiales en vivo a trav&eacute;s de YouTube.</p>
+            </div>
+            
+            <!-- Contenedor del Video -->
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 p-2">
+                <div class="relative w-full aspect-video bg-gray-900 rounded-lg flex items-center justify-center overflow-hidden">
+                    <!-- INSTRUCCIONES PARA WILLIAM: -->
+                    <!-- Para un video especifico, cambia la URL dentro de src="" por tu enlace embed. -->
+                    <!-- Para transmision en vivo automatica, usa: https://www.youtube.com/embed/live_stream?channel=ID_DE_TU_CANAL -->
+                    <iframe 
+                        class="w-full h-full"
+                        src="https://www.youtube.com/embed/live_stream?channel=UC_x5XG1OV2P6uZZ5FSM9Ttw" 
+                        title="Transmision Ministerio Dabar" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION: BIBLIOTECA (SPOTIFY Y PDFS) -->
+    <section id="biblioteca" class="py-16 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-oscuro font-serif">Recursos Gratuitos</h2>
+                <div class="w-24 h-1 bg-oro-500 mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600">Accede a nuestros libros en PDF y escucha nuestro contenido en Spotify totalmente gratis.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Spotify -->
+                <div class="bg-oro-50 rounded-xl p-8 border border-oro-100 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <svg class="w-8 h-8 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.08 10.5c-3.96-2.34-10.44-2.58-14.22-1.44-.6.18-1.2-.12-1.38-.72-.18-.6.12-1.2.72-1.38 4.32-1.26 11.4-1.02 15.84 1.62.54.3.72 1.02.42 1.56-.3.54-1.02.72-1.38.36z"/></svg>
+                        <h3 class="text-2xl font-bold text-oscuro">Libros en Spotify</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Escucha nuestros audiolibros, reflexiones y mensajes directamente desde nuestra lista de reproducci&oacute;n oficial.</p>
+                    
+                    <!-- Espacio para reproductor de Spotify -->
+                    <!-- INSTRUCCIONES PARA WILLIAM: -->
+                    <!-- 1. Ve a tu libro o podcast en Spotify -->
+                    <!-- 2. Clic en los 3 puntitos -> Compartir -> Insertar programa (Embed) -->
+                    <!-- 3. Pega el codigo <iframe> que te da Spotify aqui abajo: -->
+                    <div class="w-full">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4rOoJ6Egrf8K2IrywzwOMk?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Libros PDF -->
+                <div class="bg-gray-50 rounded-xl p-8 border border-gray-200 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        <h3 class="text-2xl font-bold text-oscuro">Descargas en PDF</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Comparte y descarga nuestra literatura gratuitamente. Material actualizado para tu crecimiento.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center justify-between p-3 bg-white rounded border border-gray-200 hover:border-oro-500 transition">
+                            <span class="font-medium">El Camino de la Gratitud Suprema.pdf</span>
+                            <button class="text-oro-700 hover:text-oro-900 font-bold text-sm">Descargar</button>
+                        </li>
+                        <li class="flex items-center justify-between p-3 bg-white rounded border border-gray-200 hover:border-oro-500 transition">
+                            <span class="font-medium">Estudio B&iacute;blico - Banderas.pdf</span>
+                            <button class="text-oro-700 hover:text-oro-900 font-bold text-sm">Descargar</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION: QUIENES SOMOS -->
+    <section id="quienes-somos" class="py-16 bg-oro-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-extrabold text-oscuro font-serif">Qui&eacute;nes Somos</h2>
+                <div class="w-24 h-1 bg-oro-500 mx-auto mt-4"></div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-8 md:p-12 text-lg text-gray-700 leading-relaxed border border-oro-100 max-w-4xl mx-auto">
+                <p class="mb-6">
+                    Somos el <strong>Ministerio Dabar Banderas Poco Sol</strong>. Nuestra misi&oacute;n es compartir un mensaje de esperanza, fe y Gratitud Suprema al mundo.
+                </p>
+                <p class="mb-6">
+                    Comenzamos nuestra labor en <strong>noviembre de 2024</strong> en Banderas de Poco Sol. Todo inici&oacute; por orden directa del Esp&iacute;ritu Santo, el cual nos envi&oacute; a levantar una nueva obra y avivar la llama de la fe en este lugar.
+                </p>
+                <p>
+                    En obediencia a este llamado divino, adquirimos la finca que anteriormente era conocida como "Porozal". Hoy, ese territorio ha sido transformado y consagrado bajo el nombre de <strong>Ciudad de Dabar de Dios</strong>, un espacio dedicado &iacute;ntegramente a la adoraci&oacute;n, la ense&ntilde;anza de la Palabra y el servicio a nuestra comunidad.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION: NOTICIAS -->
+    <section id="noticias" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-oscuro font-serif">Noticias</h2>
+                <div class="w-24 h-1 bg-oro-500 mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600">Ent&eacute;rate de los &uacute;ltimos acontecimientos y anuncios de nuestro ministerio.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta Noticia 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500">[Imagen de la Noticia]</div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-oro-700 uppercase">Anuncio</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Inauguraci&oacute;n Ciudad de Dabar</h3>
+                        <p class="text-gray-600 text-sm mb-4">Celebramos la consagraci&oacute;n de la nueva finca. Te invitamos a conocer las instalaciones y ser parte de esta bendici&oacute;n.</p>
+                        <button class="text-oro-700 font-bold text-sm hover:underline">Leer m&aacute;s</button>
+                    </div>
+                </div>
+                <!-- Tarjeta Noticia 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500">[Imagen de la Noticia]</div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-oro-700 uppercase">Evento</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Retiro Espiritual</h3>
+                        <p class="text-gray-600 text-sm mb-4">Prep&aacute;rate para nuestro pr&oacute;ximo evento de b&uacute;squeda y adoraci&oacute;n profunda en Banderas Poco Sol.</p>
+                        <button class="text-oro-700 font-bold text-sm hover:underline">Leer m&aacute;s</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION: GALERIA -->
+    <section id="galeria" class="py-16 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-oscuro font-serif">Galer&iacute;a</h2>
+                <div class="w-24 h-1 bg-oro-500 mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600">Fotograf&iacute;as y videos cortos de nuestra comunidad, eventos y la Ciudad de Dabar de Dios.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 shadow-sm overflow-hidden hover:opacity-80 transition cursor-pointer">
+                    [Foto 1]
+                </div>
+                <div class="aspect-square bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 shadow-sm overflow-hidden hover:opacity-80 transition cursor-pointer">
+                    [Foto 2]
+                </div>
+                <div class="aspect-square bg-gray-800 rounded-lg flex items-center justify-center text-white shadow-sm overflow-hidden hover:opacity-80 transition cursor-pointer relative">
+                    <svg class="w-12 h-12 absolute opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    [Video]
+                </div>
+                <div class="aspect-square bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 shadow-sm overflow-hidden hover:opacity-80 transition cursor-pointer">
+                    [Foto 3]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PAGINA / CONTACTO (ADMINISTRACION) -->
+    <footer id="contacto" class="bg-oscuro text-gray-300 py-12 border-t-4 border-oro-500 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Info Ministerio -->
+                <div>
+                    <h3 class="text-oro-500 font-serif font-bold text-xl mb-4">Ministerio Dabar</h3>
+                    <p class="text-sm">Banderas Poco Sol.<br>Transmitiendo gratitud, fe y ense&ntilde;anzas al mundo de forma libre y gratuita.</p>
+                </div>
+                <!-- Enlaces rapidos -->
+                <div>
+                    <h3 class="text-white font-bold mb-4">Secciones</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" onclick="mostrarSeccion('inicio'); return false;" class="hover:text-oro-500">Inicio</a></li>
+                        <li><a href="#" onclick="mostrarSeccion('transmisiones'); return false;" class="hover:text-oro-500">Canal de YouTube</a></li>
+                        <li><a href="#" onclick="mostrarSeccion('biblioteca'); return false;" class="hover:text-oro-500">Libros y Materiales</a></li>
+                        <li><a href="#" onclick="mostrarSeccion('galeria'); return false;" class="hover:text-oro-500">Galer&iacute;a de Fotos</a></li>
+                    </ul>
+                </div>
+                <!-- Contacto y Administracion Exclusiva -->
+                <div>
+                    <h3 class="text-white font-bold mb-4">Contacto y Administraci&oacute;n</h3>
+                    <div class="bg-gray-800 p-4 rounded border border-gray-700">
+                        <p class="text-sm text-gray-400 mb-2">Sitio web bajo la direcci&oacute;n y administraci&oacute;n exclusiva de:</p>
+                        <p class="text-oro-500 font-bold text-lg">William Dur&aacute;n</p>
+                        <div class="flex items-center gap-2 mt-2">
+                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <span class="text-white font-medium">Tel: 8584 7931</span>
+                        </div>
+                        <!-- Boton simulado para panel de control -->
+                        <div class="mt-4 pt-4 border-t border-gray-700">
+                            <a href="#" class="text-xs text-gray-500 hover:text-oro-500 flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                                Acceso Privado Administrador
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+                &copy; 2026 Ministerio Dabar Banderas Poco Sol. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para navegacion tipo "Paginas Independientes" en un solo archivo -->
+    <script>
+        // Lista con los IDs de todas las secciones principales
+        const secciones = ['inicio', 'quienes-somos', 'transmisiones', 'biblioteca', 'noticias', 'galeria'];
+
+        function mostrarSeccion(idSeccion) {
+            // Ocultar todas las secciones
+            secciones.forEach(sec => {
+                const elemento = document.getElementById(sec);
+                if (elemento) {
+                    elemento.style.display = 'none';
+                }
+            });
+            
+            // Mostrar solo la seccion que el usuario selecciono
+            const seccionActiva = document.getElementById(idSeccion);
+            if (seccionActiva) {
+                seccionActiva.style.display = 'block';
+            }
+
+            // Hacer scroll hacia arriba al cambiar de seccion
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Al cargar la pagina, ejecutar la funcion para que solo se vea "inicio"
+        window.onload = () => {
+            mostrarSeccion('inicio');
+        };
+    </script>
+
+</body>
+</html>
